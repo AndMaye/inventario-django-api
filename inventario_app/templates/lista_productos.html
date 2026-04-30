@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventario</title>
+</head>
+<body>
+    <h1>📦 Lista de Productos</h1>
+    <a href="/crear/">➕ Agregar producto</a>
+
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <strong>{{ producto.nombre }}</strong> -
+                {{ producto.precio }} COP -
+                Stock: {{ producto.stock }}
+                <strong>{{ producto.nombre }}</strong> -
+                {{ producto.precio }} COP -
+                Stock: {{ producto.stock }}
+
+<a href="/editar/{{ producto.id }}">✏️ Editar</a>
+<a href="/eliminar/{{ producto.id }}">🗑️ Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
